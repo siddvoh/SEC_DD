@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secdd"
+version = "0.1.0"
+description = "Analyze entire SEC filings using Recursive Language Models. CLI and Python library."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "Siddharth Vohra" },
+]
+keywords = ["sec", "edgar", "finance", "llm", "rlm", "recursive-language-models", "openai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "rlms>=0.1.1,<1.0",
+    "openai>=2.30.0,<3.0",
+    "httpx>=0.28.0,<1.0",
+    "pypdf>=6.0.0,<7.0",
+    "python-dotenv>=1.2.0,<2.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0,<9.0",
+    "reportlab>=4.0,<5.0",
+]
+
+[project.scripts]
+secdd = "secdd.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/siddvoh/secdd"
+Issues = "https://github.com/siddvoh/secdd/issues"
+
+[tool.setuptools.packages.find]
+include = ["secdd*"]
+
+[tool.setuptools.exclude-package-data]
+"*" = [".env", ".env.*", ".env.local"]
+
