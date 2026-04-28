@@ -43,8 +43,8 @@ test = [
 secdd = "secdd.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/siddvoh/secdd"
-Issues = "https://github.com/siddvoh/secdd/issues"
+Homepage = "https://github.com/siddvoh/SEC_DD"
+Issues = "https://github.com/siddvoh/SEC_DD/issues"
 
 [tool.setuptools.packages.find]
 include = ["secdd*"]

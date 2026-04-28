@@ -14,8 +14,8 @@ Standard RAG retrieves a few chunks and hopes the answer is in there. SEC Deep D
 Clone and install in editable mode. There is no PyPI package: everything runs from source.
 
 ```bash
-git clone https://github.com/siddvoh/secdd.git
-cd secdd
+git clone https://github.com/siddvoh/SEC_DD.git
+cd SEC_DD
 pip install -e .
 ```
 
@@ -212,4 +212,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-[MIT](LICENSE)
+MIT. See [LICENSE](LICENSE). The full source for the CLI, EDGAR fetcher, and prompts is in this repo.
